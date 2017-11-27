@@ -1,1 +1,22 @@
 Make no mistake this is the members index
+
+
+<h1>Listing socio</h1>
+ 
+<%= link_to 'Novo Socio', new_socio_path %>
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Email</th>
+    <th>Morada</th>
+  </tr>
+ 
+  <% @socio.each do |socio| %>
+    <tr>
+      <td><%= socio.nome %></td>
+      <td><%= socio.email %></td>
+      <td><%= socio.morada %></td>
+      <td><%= link_to 'Show', socio_path(socio) %></td>
+    </tr>
+  <% end %>
+</table>
