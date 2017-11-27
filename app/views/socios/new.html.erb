@@ -1,0 +1,20 @@
+<%= form_with scope: :socios, url: socios_path, local: true do |form| %>
+  <p>
+    <%= form.label :nome %><br>
+    <%= form.text_field :nome %>
+  </p>
+ 
+  <p>
+    <%= form.label :email %><br>
+    <%= form.text_field :email %>
+  </p>
+ 
+  <p>
+    <%= form.label :morada %><br>
+    <%= form.text_field :morada %>
+  </p>  
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
