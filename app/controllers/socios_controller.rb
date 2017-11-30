@@ -5,7 +5,9 @@ class SociosController < ApplicationController
 
 	def new
 	end
-
+	def edit
+		@socio = Socio.find(params[:id])
+	end
 	def show
 		@socio = Socio.find(params[:id])
 	end
@@ -14,6 +16,22 @@ class SociosController < ApplicationController
 		@socio.save
 		redirect_to @socio
 	end
+
+	def update
+		@socio = Socio.find(params[:id])
+
+		if @socio.update(socio_params)
+			redirect_to @socio
+		else
+			render 'edit'
+		end
+	end
+ def destroy
+    @socio = Socio.find(params[:id])
+    @socio.destroy
+ 
+    redirect_to @socio
+  end
 
 	private
 	def socio_params
