@@ -17,10 +17,6 @@ Make no mistake this is the members index
       <td><%= socio.email %></td>
       <td><%= socio.morada %></td>
       <td><%= link_to 'Show', socio_path(socio) %></td>
-       <td><%= link_to 'Editar', edit_socio_path(socio) %></td>
-         <td><%= link_to 'Apagar', socio_path(socio),
-              method: :delete,
-              data: { confirm: 'Tem a certeza que quer apagar este socio?' } %></td>
     </tr>
   <% end %>
 </table>
